@@ -9,6 +9,8 @@ import { RandomUserService } from 'src/app/services/random-user.service';
 export class HomeComponent implements OnInit {
 
   myUsers: any[] = [];
+  error: boolean=false;
+  errorMessage: string;
   constructor(private user: RandomUserService) {
 
   }
@@ -20,6 +22,8 @@ export class HomeComponent implements OnInit {
       this.myUsers = data.results;
       console.log('MyUsers:', this.myUsers);
     }, (error) => {
+      this.error=true;
+      this.errorMessage = error.message;
       console.log('El error que se ha producido es:', error);
     });
   }

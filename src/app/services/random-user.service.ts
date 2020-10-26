@@ -20,6 +20,8 @@ export class RandomUserService {
 
     //Petición con headers personalizadas
     return this.http.get('https://randomuser.me/api/?results=1', { headers });
+    //si quiero probar el error de la url, que salga el mensaje en pantalla
+    // return this.http.get('https://rrrandomuser.me/api/?results=1', { headers });
     //petición normal
     // return this.http.get('https://randomuser.me/api/?results=1');
     // this.http.get('https://randomuser.me/api/?results=10').subscribe((data: any) => {
