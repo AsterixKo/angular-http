@@ -15,7 +15,7 @@ export class RandomUserService {
   getRandomUser() {
     //este headers es un ejemplo, no significa nada para la api de randomuser
     const headers = new HttpHeaders({
-      Autorization: 'Bearer 737373873ub4hgh343434'// lo tipico es Autorization
+      Authorization: 'Bearer 737373873ub4hgh343434'// lo tipico es Autorization
     });
 
     //Petición con headers personalizadas
